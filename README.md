@@ -1,5 +1,7 @@
 # NotionProxy Guide
 
+NotionProxy is a free, open-source tool that enables you to serve your Notion website through your custom domain using Cloudflare Workers, providing URL rewriting and fast edge performance without any hosting costs.
+
 ## Step 1: Setup your Cloudflare account
 
 1. Add your domain to Cloudflare. Make sure to click 'Manually enter DNS records". Also make sure that DNS doesn't have `A` records for your domain and no `CNAME` alias for `www`
