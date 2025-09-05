@@ -3,8 +3,8 @@
 # Script to duplicate the example domain folder for a new domain
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
-    echo "Usage: ./duplicate-domain.sh <new-domain> <notion-subdomain> <main-page-id> <cloudflare-worker-name>"
-    echo "Example: ./duplicate-domain.sh example.com my-notion-123 abc123def456ghi789jkl012mno345pq my-worker-name"
+    echo "Usage: ./initialize-new-domain.sh <new-domain> <notion-subdomain> <main-page-id> <cloudflare-worker-name>"
+    echo "Example: ./initialize-new-domain.sh example.com my-notion-123 abc123def456ghi789jkl012mno345pq my-worker-name"
     echo ""
     echo "Where:"
     echo "  <new-domain>: Your custom domain (e.g., example.com)"

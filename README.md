@@ -17,13 +17,13 @@
 Use the provided script to quickly set up your customized domain:
 
 ```bash
-./duplicate-domain.sh <new-domain> <notion-subdomain> <main-page-id>
+./initialize-new-domain.sh <new-domain> <notion-subdomain> <main-page-id> <cloudflare-worker-name>
 ```
 
 **Example:**
 
 ```bash
-./duplicate-domain.sh mynewdomain.com my-notion-123 abc123def456ghi789jkl012mno345pq
+./initialize-new-domain.sh mynewdomain.com my-notion-123 abc123def456ghi789jkl012mno345pq yourdomain-com-notion-proxy
 ```
 
 **Parameters:**
@@ -31,6 +31,7 @@ Use the provided script to quickly set up your customized domain:
 - `new-domain`: Your custom domain (e.g., example.com)
 - `notion-subdomain`: The subdomain part of your Notion URL (e.g., if your Notion URL is https://my-notion-123.notion.site, use 'my-notion-123')
 - `main-page-id`: The Notion page ID for your main/home page
+- `cloudflare-worker-name`: The name for your Cloudflare Worker (e.g., yourdomain-com-notion-proxy), the part before any periods
 
 ## Step 3: Configure Variables And Deploy!
 
