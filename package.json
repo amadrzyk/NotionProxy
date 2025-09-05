@@ -1,0 +1,59 @@
+{
+  "name": "notehost",
+  "version": "1.0.33",
+  "description": "NoteHost is a free and powerful Notion hosting service.",
+  "repository": "https://github.com/velsa/notehost",
+  "homepage": "https://github.com/velsa/notehost",
+  "keywords": [
+    "Notion",
+    "Cloudflare",
+    "Workers",
+    "Hosting"
+  ],
+  "author": {
+    "name": "Vels (Itzhak Lobak)",
+    "email": "velshome@gmail.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "init": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "prebuild": "./build-body-js-string.sh",
+    "dev:cli": "npx tsx --inspect src/cli/index.ts init test.com",
+    "build": "npm run prebuild && tsup src/index.ts --format cjs,esm --dts-resolve --clean --sourcemap --out-dir dist && npm run build:cli",
+    "build:cli": "tsup src/cli/index.ts --format esm --clean --out-dir dist/cli",
+    "release": "npm run build && changeset publish",
+    "lint": "echo Fix lint!"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.2",
+    "chalk": "^5.3.0",
+    "change-case-all": "^2.1.0",
+    "commander": "^11.1.0",
+    "ejs": "^3.1.9",
+    "htmlrewriter": "^0.0.7",
+    "is-valid-domain": "^0.1.6"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "@stylistic/eslint-plugin": "^1.5.4",
+    "@types/node": "^20.11.6",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "3.2.2",
+    "tsc": "^2.0.4",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.0.0"
+  }
+}

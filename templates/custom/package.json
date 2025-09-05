@@ -1,0 +1,18 @@
+{
+  "name": "<%= packageJsonName %>",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "prebuild": "node ./src/_build-page-script-js-string.js",
+    "start": "npm run prebuild && npx --yes wrangler@latest dev",
+    "deploy": "npm run prebuild && npx --yes wrangler@latest deploy",
+    "logs": "npx --yes wrangler@latest tail"
+  },
+  "dependencies": {
+    "notehost": "^<%= notehostVersion %>"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0"
+  }
+}

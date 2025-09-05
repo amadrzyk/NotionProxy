@@ -1,0 +1,9 @@
+name = "example-domain-com"
+main = "src/index.ts"
+compatibility_date = "2024-01-08"
+workers_dev = true
+
+routes = [
+	{ pattern = "example.domain.com", custom_domain = true },
+	{ pattern = "www.example.domain.com", custom_domain = true }
+]
