@@ -38,8 +38,7 @@ Use the provided script to quickly set up your customized domain:
 1. Navigate to your new domain folder
 2. Run `npm install`
 3. Update `src/site-config.ts` with your specific metadata
-4. Configure `wrangler.toml` with your Cloudflare worker name
-5. Deploy with `npm run deploy`
+4. Deploy with `npm run deploy`
 
 ## Important Notes
 
